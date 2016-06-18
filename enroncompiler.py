@@ -38,7 +38,7 @@ def createCorpus(dirNames):
             newData.append(emailFilter)
 
     #return the data as corpus
-    print "Hello"
+    
     return newData
 
  
