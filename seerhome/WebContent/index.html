@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SEER: Home</title>
+<style type="text/css">
+html {
+	height: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h2,h4,p {
+	margin: 5;
+	width: 100%;
+	text-align:center;
+	padding: 5;
+}
+
+#formsubmit {
+	width: 20%;
+	height: 35px;
+	padding: 5;
+}
+#info {
+	width:10%;
+	padding: 5;
+}
+#buttondiv {
+	float:left;
+	width: 100%;
+	text-align:center;
+	margin:auto;
+	display:block;
+	
+}
+#infout {
+	width:100%;
+	text-align: center;
+}
+</style>
+
+<script type="text/javascript">
+
+function showInfo(){
+	var pre = document.getElementById('infout');
+	//pre.innerHTML='';
+	
+	appendPre("1. SEER works through accessing your Gmail account. To do so, you need to have IMAP enabled in your account settings.");
+	appendPre("Detailed instrucions for same are here: https://support.google.com/mail/troubleshooter/1668960?hl=en");
+	appendPre("");
+	appendPre("2. After clicking on Log In, ensure you have Popups enabled, or you won't be able to access the log in window.");appendPre("");
+	appendPre("3. If you are already logged into an account in your browser, you may have to logout before accessing it here.");appendPre("");
+	appendPre("4. All the data accessed is present in your browser's cache. You can delete it any time by clearing your browser's cache.");appendPre("");
+	appendPre("5. This application is built as a pilot for a research study. If you have any suggestions, problems or questions, please contact: homeofseer@gmail.com ");
+	
+}
+function appendPre(message) {
+	  var pre = document.getElementById('infout');
+	  var textContent = document.createTextNode(message + '\n');
+	  pre.appendChild(textContent);
+	}
+	
+</script>	
+	
+</head>
+<body>
+<div id="title">
+<h2>SEER: Recommendation System That Explains.</h2>
+<br><br><br>
+<h4> Welcome to the homepage of SEER!</h4>
+<br>
+<p> SEER is a pilot application of study undertaken by Udgam Mehetre as part of MSc Computing Practicum at Dublin City University.</p>
+<p> Supervised by Dr. Alexander O'Connor and Dr. Fred Hollowood, the study aims to understand the importance of explanations in recommendation systems.</p>
+<br><br><br>
+<p> To proceed, please login to your Gmail account by clicking below.</p>
+<p> Note: Please read the instructions before continuing, if you are here for the first time.</p>
+</div>
+<div id="buttondiv">
+<br>
+<a href="scripts/gmailscript.jsp"><input type="submit" id="formsubmit" value="Login"></a>
+<br><br>
+<input type="button" id="info" value="Instructions" onclick="showInfo()">
+<pre id="infout"></pre>
+</div>
+
+
+
+</body>
+</html>
